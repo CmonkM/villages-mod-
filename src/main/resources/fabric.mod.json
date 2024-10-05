@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "villagesmod",
+	"version": "${version}",
+	"name": "Villages Mod",
+	"description": "Villages mod",
+	"authors": [
+		"Cmonk!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/villagesmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.cmonk.villagesmod.VillagesMod"
+		],
+		"fabric-datagen": [
+			"net.cmonk.villagesmod.VillagesModDataGenerator"
+		],
+		"client": [
+			"net.cmonk.villagesmod.VillagesModClient"
+		]
+
+	},
+	"mixins": [
+		"villagesmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
